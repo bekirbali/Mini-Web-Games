@@ -1,0 +1,13 @@
+{
+  "name": "weekend-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekend micro-games arcade hub and collection",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "dev:demirci": "npm --prefix demirci run dev",
+    "dev:imparatorluk": "npm --prefix imparatorluk run dev"
+  }
+}

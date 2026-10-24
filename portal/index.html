@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0b10" />
+    <meta
+      name="description"
+      content="Weekend Arcade — Tarayıcıda sıfır kurulumla çalışan, hızlı başlayan ve derinleşen bağımsız mikro oyun koleksiyonu."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Weekend Arcade — Bağımsız Mikro Oyunlar</title>
+    <!-- Google Fonts for crisp modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./portal.css" />
+  </head>
+  <body>
+    <div class="ambient-bar" aria-hidden="true"></div>
+
+    <header class="portal-header container">
+      <a href="./" class="brand-wrapper" title="Weekend Arcade Ana Sayfası">
+        <img src="./favicon.svg" alt="Weekend Arcade Logo" class="brand-logo" />
+        <div class="brand-text">
+          <h1>WEEKEND ARCADE</h1>
+          <span>Mikro Oyun Laboratuvarı</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="sound-toggle-btn" id="sound-toggle" title="Efekt Seslerini Aç/Kapat">
+          🔇 Ses Kapalı
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-pill">
+          <span>⚡ SAF WEB & SIFIR KURULUM</span>
+        </div>
+        <h2 class="hero-title">
+          Hızlı Başla. <span class="highlight">Derinleş.</span> Tekrar Dene.
+        </h2>
+        <p class="hero-desc">
+          Tek ekranda 3 dakikalık mikro-RTS veya her vuruşta risk yönettiğin +9 demirci oyunu.
+          Hafta sonu tasarlanmış, kurulumsuz çalışan bağımsız oyun deneyimleri.
+        </p>
+        <div class="stats-strip">
+          <div class="stat-item">
+            <span>Koleksiyonda:</span>
+            <b id="stat-total">2</b> oyun
+          </div>
+          <div class="stat-item">
+            <span>Hemen Oynanabilir:</span>
+            <b id="stat-playable" style="color: var(--accent-green)">2</b> oyun
+          </div>
+          <div class="stat-item">
+            <span>Ortalama Tur:</span>
+            <b>3 - 5 dk</b>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toolbar: Filters & Search -->
+      <section class="toolbar-section" aria-label="Oyun Filtreleri">
+        <div class="filter-group">
+          <button type="button" class="filter-btn active" data-filter="all">Tüm Oyunlar</button>
+          <button type="button" class="filter-btn" data-filter="playable">Oynanabilir v1</button>
+          <button type="button" class="filter-btn" data-filter="in_development">Tasarım / Yakında</button>
+        </div>
+
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="search"
+            class="search-input"
+            id="search-box"
+            placeholder="Oyun veya etiket ara..."
+            autocomplete="off"
+            aria-label="Oyunlarda ara"
+          />
+        </div>
+      </section>
+
+      <!-- Games Grid -->
+      <section class="games-grid" id="games-grid" aria-label="Oyun Listesi">
+        <!-- Rendered via portal.js -->
+      </section>
+
+      <!-- How to add new games guide -->
+      <section class="dev-guide-section">
+        <div class="dev-guide-header">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Yeni Oyun Ekleme Mimarisi
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Modüler Altyapı</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+          Bu sistem sıfır konfigürasyonla yeni oyunlar ekleyebilmeniz için tasarlanmıştır. Gelecekte portala yeni bir oyun dahil etmek 3 adımdan ibarettir:
+        </p>
+        <div class="steps-grid">
+          <div class="step-box">
+            <div class="step-num">ADIM 01</div>
+            <h4>Klasör Oluştur</h4>
+            <p>Kök dizine yeni oyunun klasörünü ekleyin (örn: <code>labirent/</code>), içine kendi <code>package.json</code> ve Vite/HTML kurgusunu koyun.</p>
+          </div>
+          <div class="step-box">
+            <div class="step-num">ADIM 02</div>
+            <h4>Konfigürasyona Yaz</h4>
+            <p><code>portal/games.json</code> içine yeni oyunun başlığını, etiketlerini ve klasör adını ekleyin (<code>status: "playable"</code>).</p>
+          </div>
+          <div class="step-box">
+            <div class="step-num">ADIM 03</div>
+            <h4>Build & Dağıtım</h4>
+            <p><code>npm run build</code> çalıştırın. Script oyunu otomatik derler, portala bağlar ve Vercel'e hazır <code>dist/</code> içine yerleştirir.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Drawer for Game Details -->
+    <div class="modal-overlay" id="details-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button type="button" class="modal-close-btn" id="modal-close" aria-label="Pencereyi Kapat">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <footer class="portal-footer container">
+      <div>
+        <span>© 2026 Weekend Arcade. Tüm hakları saklıdır.</span>
+      </div>
+      <div>
+        <span>Vercel Edge Ready • TypeScript & Canvas 2D</span>
+      </div>
+    </footer>
+
+    <script src="./portal.js"></script>
+  </body>
+</html>

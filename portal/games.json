@@ -1,0 +1,88 @@
+[
+  {
+    "id": "demirci",
+    "title": "Lanetli Demirci",
+    "tagline": "+9 Basma Roguelike",
+    "description": "Her vuruşta zamanlama ve risk seçimi: müşterilerin eşyalarını kırmadan +9'a bas, ustanın lanetinden kurtul.",
+    "genre": "Roguelite / Zamanlama",
+    "duration": "3 - 5 dk",
+    "status": "playable",
+    "badge": "Oynanabilir v1",
+    "tags": ["Zamanlama", "Risk Yönetimi", "Pixel FX", "Metin2 Havası"],
+    "path": "./demirci/",
+    "accentColor": "#f0a93c",
+    "bgGradient": "radial-gradient(circle at 80% 20%, rgba(240, 169, 60, 0.15), transparent 60%)",
+    "icon": "anvil",
+    "featured": true,
+    "buildDir": "demirci",
+    "details": {
+      "controls": "Boşluk / Tıklama (Vuruş), 1-2-3 (Tutum / Eşya seçimi)",
+      "highlight": "Kritik vuruş penceresi, kutsama parşömeni ve çelik suyu kurtarma mekaniği.",
+      "version": "v1.0"
+    }
+  },
+  {
+    "id": "imparatorluk",
+    "title": "3 Dakikalık İmparatorluk",
+    "tagline": "Tek Ekran Mikro-RTS",
+    "description": "180 saniyede köylüleri yönlendir, kaynakları topla, akınlara dayan ve İmparatorluk Çağı'na ulaşarak zafere eriş.",
+    "genre": "Mikro-RTS / Strateji",
+    "duration": "3 dk",
+    "status": "playable",
+    "badge": "Oynanabilir v1",
+    "tags": ["Gerçek Zamanlı", "Mikro-Yönetim", "Strateji", "180sn Run"],
+    "path": "./imparatorluk/",
+    "accentColor": "#e8bd56",
+    "bgGradient": "radial-gradient(circle at 80% 20%, rgba(232, 189, 86, 0.15), transparent 60%)",
+    "icon": "crown",
+    "featured": true,
+    "buildDir": "imparatorluk",
+    "details": {
+      "controls": "Tıklama / Dokunmatik (Köylü atama, bina basma, çağ atlama)",
+      "highlight": "Karanlık Çağ'dan İmparatorluk Çağı'na tek ekranda kompakt strateji akışı.",
+      "version": "v1.0"
+    }
+  },
+  {
+    "id": "towerrogue",
+    "title": "Siper",
+    "tagline": "Roguelite Kule Savunma",
+    "description": "Sabit yollu, draft tabanlı taktik kule savunması. Her run yeni kule sinerjileri ve yatay meta keşfi.",
+    "genre": "Kule Savunma / Draft",
+    "duration": "8 - 12 dk",
+    "status": "in_development",
+    "badge": "Tasarım / Yakında",
+    "tags": ["Kule Savunma", "Draft", "Sinerji", "Roguelite"],
+    "path": "#",
+    "accentColor": "#6fb3d9",
+    "bgGradient": "radial-gradient(circle at 80% 20%, rgba(111, 179, 217, 0.12), transparent 60%)",
+    "icon": "shield",
+    "featured": false,
+    "details": {
+      "controls": "Kart seçimi ve kule yerleşimi",
+      "highlight": "Kayıp atfını şansa değil karara bağlayan şeffaf kule ve düşman fiziği.",
+      "version": "Tasarım Aşaması (PRD Hazır)"
+    }
+  },
+  {
+    "id": "nefes",
+    "title": "Nefes",
+    "tagline": "Tam Ekran Duyarlı Mola Aracı",
+    "description": "Tam ekran oyun veya film sırasında susan, ekrandan çıkıldığında su ve mola hatırlatan bağlam farkında araç.",
+    "genre": "Yardımcı Araç / Desktop",
+    "duration": "Sürekli",
+    "status": "in_development",
+    "badge": "Tasarım / Yakında",
+    "tags": ["Tray Uygulaması", "Oyun Dostu", "Bağlam Duyarlı", "Windows"],
+    "path": "#",
+    "accentColor": "#7fc29b",
+    "bgGradient": "radial-gradient(circle at 80% 20%, rgba(127, 194, 155, 0.12), transparent 60%)",
+    "icon": "sparkle",
+    "featured": false,
+    "details": {
+      "controls": "Windows Sistem Tepsisi (Tray)",
+      "highlight": "Kullanıcıyı en kritik aksiyon anında bölmeyen akıllı bağlam tespiti.",
+      "version": "Tasarım Aşaması (PRD Hazır)"
+    }
+  }
+]
